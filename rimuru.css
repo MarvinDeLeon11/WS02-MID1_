@@ -1,0 +1,139 @@
+
+:root {
+    --primary: rgb(29, 221, 189);
+    --bgDark: rgb(12, 12, 12);
+    --white: rgb(250, 250, 250);
+    --secondary: rgb(0, 59, 50);
+    --bgLight: rgb(190, 181, 181);
+  }
+  
+  body, html {
+    margin: 0;
+    padding: 0;
+  }
+  
+  html, body, .rimuru {
+    width: 100%;
+    height: 100%;
+    color: aliceblue;
+    text-align: center;
+  }
+  
+  .container {
+    max-width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+    background-color: gray;
+  }
+  
+  header {
+    background-color: var(--bgDark);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 63% 94%, 0 100%);
+  }
+  
+  header nav .left a {
+    color: var(--white);
+    text-decoration: none;
+    margin-right: 2rem;
+    text-transform: uppercase;
+    transition: all .2s ease;
+  }
+  
+  header nav .left a:hover {
+    color: var(--primary);
+  }
+  
+  header nav {
+    padding: 2rem 0;
+  }
+  
+  header nav .logo {
+    margin-right: 3rem;
+  }
+  
+  .rimuru header img {
+    width: 300px;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .rimuru .caption {
+    padding: 20px;
+    text-align: center;
+    font-size: 400%;
+    color: var(--white);
+  }
+  
+  .rimuru .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 20px;
+  }
+  
+  .rimuru .main {
+    margin: 20px;
+    text-align: center;
+  }
+  
+  .rimuru .main img {
+    width: 200px;
+    height: auto;
+  }
+  
+  .rimuru .desc a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  footer {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .btn-primary {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background-color: var(--secondary);
+    transition: all 0.4s ease;
+    z-index: 0;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  
+  .btn-primary:hover::before {
+    width: 0;
+    height: 0;
+  }
+  
+  .btn-primary span {
+    position: relative;
+    z-index: 1;
+  }
+  
+
+  .rimuru header {
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
